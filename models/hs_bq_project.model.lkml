@@ -14,10 +14,6 @@ explore: order_items {
     type: inner
     relationship: many_to_one
     sql_on:
-       {% if order_items.user_id._in_query %}
-            ${top_10_simple_item_names.grouper} = ${order_items.user_id}
-       {% elsif order_items.inventory_item_id._in_query %}
-            ${top_10_simple_item_names.grouper} = ${order_items.inventory_item_id}
-       {% endif %};;
+        ${order_items.user_id} = ${top_10_simple_item_names.user_id};;
   }
 }
