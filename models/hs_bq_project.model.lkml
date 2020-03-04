@@ -1,6 +1,7 @@
 connection: "biquery_publicdata_standard_sql"
 
 include: "/views/*.view"
+include: "/**/*.dashboard"
 
 datagroup: hs_bq_project_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -14,6 +15,10 @@ explore: order_items {
     type: inner
     relationship: many_to_one
     sql_on:
-        ${order_items.user_id} = ${top_10_simple_item_names.user_id};;
+        ${order_items.order_id} = ${top_10_simple_item_names.order_id};;
   }
+}
+
+explore: order_items_2 {
+  from: order_items
 }
