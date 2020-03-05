@@ -11,7 +11,7 @@ datagroup: hs_bq_project_default_datagroup {
 persist_with: hs_bq_project_default_datagroup
 
 explore: order_items {
-  sql_always_where: {{_user_attributes['testsql']}}
+  sql_always_where: ({{_user_attributes['testsql']}})
  ;;
   join: top_10_simple_item_names {
     type: inner
