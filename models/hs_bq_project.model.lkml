@@ -11,13 +11,13 @@ datagroup: hs_bq_project_default_datagroup {
 persist_with: hs_bq_project_default_datagroup
 
 explore: order_items {
-  sql_always_where: ({{_user_attributes['testsql']}})
- ;;
+#   sql_always_where: ({{_user_attributes['testsql']}})
+#  ;;
   join: top_10_simple_item_names {
     type: inner
     relationship: many_to_one
     sql_on:
-        ${order_items.order_id} = ${top_10_simple_item_names.order_id};;
+        ${order_items.user_id} = ${top_10_simple_item_names.user_id};;
   }
 }
 
