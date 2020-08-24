@@ -60,6 +60,11 @@ view: order_items {
     sql: ${sale_price} ;;
   }
 
+  measure: count_distinct_users {
+    type: count_distinct
+    sql: ${users.id} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
@@ -76,4 +81,8 @@ view: order_items {
       inventory_items.product_name
     ]
   }
+}
+
+view: +order_items {
+  dimension: hugo_test {}
 }
