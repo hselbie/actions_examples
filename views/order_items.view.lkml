@@ -13,9 +13,9 @@ view: order_items {
     sql: ${TABLE}.created_at ;;
   }
 
-  dimension: delivered_at {
-    type: string
-    sql: ${TABLE}.delivered_at ;;
+  dimension_group: delivered_at {
+    type: time
+    sql: cast(${TABLE}.delivered_at as timestamp) ;;
   }
 
   dimension: inventory_item_id {

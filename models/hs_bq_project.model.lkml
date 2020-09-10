@@ -30,9 +30,9 @@ explore: order_items_2 {
 }
 # Place in `hs_bq_project` model
 explore: +order_items {
-  aggregate_table: rollup__delivered_at {
+  aggregate_table: rollup__delivered_at_date {
     query: {
-      dimensions: [delivered_at]
+      dimensions: [delivered_at_date]
       measures: [total_sale_price]
       timezone: "America/New_York"
     }
