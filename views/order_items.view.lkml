@@ -55,6 +55,18 @@ view: order_items {
     sql: ${TABLE}.user_id ;;
   }
 
+  parameter: selector {
+    suggestions: ["sum", "count"]
+  }
+
+  measure: dynamic {
+    type: number
+    sql: {% if selector._parameter_value == "sum" %}
+          ${total_sale_price}
+         {% else %}
+          ${count_distinct_users};;
+  }
+
   measure: total_sale_price {
     type: sum
     sql: ${sale_price} ;;

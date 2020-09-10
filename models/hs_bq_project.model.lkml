@@ -28,17 +28,3 @@ explore: order_items_2 {
     sql_on: ${users.id} = ${order_items.user_id} ;;
   }
 }
-# Place in `hs_bq_project` model
-explore: +order_items {
-  aggregate_table: rollup__delivered_at_date {
-    query: {
-      dimensions: [delivered_at_date]
-      measures: [total_sale_price]
-      timezone: "America/New_York"
-    }
-
-    materialization: {
-      datagroup_trigger: hs_bq_project_default_datagroup
-    }
-  }
-}
