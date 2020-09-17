@@ -56,15 +56,17 @@ view: order_items {
   }
 
   parameter: selector {
+    type: unquoted
     suggestions: ["sum", "count"]
   }
 
   measure: dynamic {
     type: number
-    sql: {% if selector._parameter_value == "sum" %}
+    sql: {% if order_items.selector._parameter_value == 'sum' %}
           ${total_sale_price}
          {% else %}
-          ${count_distinct_users};;
+          ${count_distinct_users}
+         {% endif %};;
   }
 
   measure: total_sale_price {
@@ -74,7 +76,24 @@ view: order_items {
 
   measure: count_distinct_users {
     type: count_distinct
-    sql: ${users.id} ;;
+    sql: ${user_id} ;;
+  }
+
+  measure: drill_link_listener {
+    hidden: yes
+    type: sum
+    sql: 1 ;;
+    drill_fields: []
+  }
+
+  measure: total_sale_price_drill {
+    type: sum
+    value_format_name: usd
+    sql: ${sale_price} ;;
+    link: {
+      label: "{{ _user_attributes['first_name'] }}'s Custom Drill"
+      url: "@{per_user_drilling}"
+    }
   }
 
   measure: count {

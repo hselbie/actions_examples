@@ -2,15 +2,28 @@ connection: "biquery_publicdata_standard_sql"
 
 include: "/views/*.view"
 include: "/**/*.dashboard"
-
+include: "/refinements.lkml"
 datagroup: hs_bq_project_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
+
 persist_with: hs_bq_project_default_datagroup
 
 explore: order_items {
+  aggregate_table: parameter_test {
+    query: {
+      dimensions: [order_items.delivered_at_date]
+      measures: [order_items.count_distinct_users
+        , order_items.total_sale_price
+        , order_items.dynamic]
+#       filters: [order_items.selector: "sum"]
+    }
+    materialization: {
+      persist_for: "1 hour"
+    }
+  }
 #   sql_always_where: ({{_user_attributes['testsql']}})
 #  ;;
   join: top_10_simple_item_names {
