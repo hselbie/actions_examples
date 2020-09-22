@@ -14,6 +14,7 @@ view: order_items {
   }
 
   dimension: test_deploy {}
+  dimension: test_deploy_github {}
 
   dimension_group: delivered_at {
     type: time
