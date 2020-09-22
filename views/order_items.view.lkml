@@ -13,6 +13,8 @@ view: order_items {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: test_deploy {}
+
   dimension_group: delivered_at {
     type: time
     sql: cast(${TABLE}.delivered_at as timestamp) ;;

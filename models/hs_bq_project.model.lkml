@@ -36,8 +36,8 @@ explore: order_items {
 
 explore: order_items_2 {
   view_name: order_items
-  join: users {
-    fields: []
-    sql_on: ${users.id} = ${order_items.user_id} ;;
-  }
+  # join: users {
+  #   fields: []
+  #   sql_on: ${users.id} = ${order_items.user_id} ;;
+  # }
 }
