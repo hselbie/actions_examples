@@ -1,4 +1,5 @@
-# Place in `hs_bq_project` model
+include: "/models/**.lkml"
+
 explore: +order_items {
   aggregate_table: rollup__dynamic {
     query: {
