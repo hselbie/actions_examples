@@ -8,7 +8,7 @@ datagroup: hs_bq_project_default_datagroup {
   max_cache_age: "1 hour"
 }
 
-#ocmmenc
+#ocmmencd
 persist_with: hs_bq_project_default_datagroup
 
 explore: order_items {
