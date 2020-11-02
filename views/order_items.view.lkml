@@ -39,7 +39,7 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
-  measure: total_sale_price {
+  measure: total_sale {
     type: sum
     sql: ${sale_price} ;;
     html: {{value}} ;;
