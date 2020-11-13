@@ -43,3 +43,4 @@ jobs:
         VERIFY_SSL: ${{ secrets.L_API_VERIFY_SSL }}
       run: |
         python .github/actions/test_ini_in.py
+        python .github/actions/run_test.py
