@@ -34,4 +34,4 @@ if __name__ == "__main__":
 
     sdk = looker_sdk.init31()
 
-    # print(sdk.me())
+    print(sdk.me())
