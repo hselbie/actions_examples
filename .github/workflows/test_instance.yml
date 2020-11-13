@@ -15,11 +15,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      env:
-        BASE_URL=${{ secrets.L_BASE_URL }}
-        CLIENT_ID=${{ secrets.L_API_CLIENT_ID }}
-        CLIENT_SECRET=${{ secrets.L_API_CLIENT_SECRET }}
-        # VERIFY_SSL=${{ secrets.L_API_VERIFY_SSL }}
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -29,6 +24,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install looker_sdk
+      
     # - name: Lint with flake8
     #   run: |
     #     # stop the build if there are Python syntax errors or undefined names
@@ -40,5 +36,10 @@ jobs:
     #     python -m pip install --upgrade pip
 
     - name: Run Action Script
+      env:
+          BASE_URL=${{ secrets.L_BASE_URL }}
+          CLIENT_ID=${{ secrets.L_API_CLIENT_ID }}
+          CLIENT_SECRET=${{ secrets.L_API_CLIENT_SECRET }}
+          VERIFY_SSL=${{ secrets.L_API_VERIFY_SSL }}
       run: |
         python .github/actions/run_test.py --id BASE_URL
