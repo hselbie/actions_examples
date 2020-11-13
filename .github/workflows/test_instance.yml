@@ -42,4 +42,4 @@ jobs:
         CLIENT_SECRET: ${{ secrets.L_API_CLIENT_SECRET }}
         VERIFY_SSL: ${{ secrets.L_API_VERIFY_SSL }}
       run: |
-        python .github/actions/run_test.py
+        python .github/actions/test_ini_in.py
