@@ -20,8 +20,8 @@ client_secret={{client_secret}}
 verify_ssl=False
 """
 
-
-
 j2_template = jinja2.Template(template)
 
-print(j2_template.render(data))
+with open ('looker.ini', 'w') as ini_file:
+    ini_file.write(j2_template)
+
