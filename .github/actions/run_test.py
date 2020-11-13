@@ -3,7 +3,6 @@ import argparse
 from io import StringIO   
 import configparser as ConfigParser
 import os
-import os 
 import pprint 
   
 # Get the list of user's 
