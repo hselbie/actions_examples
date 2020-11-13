@@ -10,6 +10,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    print(args.id)
+    print(f'this is my test {args.id}')
     # sdk = looker_sdk.init31(config_file='test_instance.ini')
     # print(sdk.me())
