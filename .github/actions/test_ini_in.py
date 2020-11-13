@@ -30,6 +30,6 @@ data = {
     "ntp_server_sec": "1.pool.ntp.org",
 }
 
-j2_template = Template(template)
+# j2_template = Template(template)
 
-print(j2_template.render(data))
+# print(j2_template.render(data))
