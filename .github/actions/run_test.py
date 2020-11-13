@@ -3,6 +3,7 @@ import argparse
 from io import StringIO   
 
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--id', type=str)
@@ -27,6 +28,6 @@ if __name__ == "__main__":
     
     ini_file = StringIO(string) 
 
-    sdk = looker_sdk.init31(config_file=string)
+    sdk = looker_sdk.init31(config_file='test_instance.ini')
 
     print(sdk.me())
