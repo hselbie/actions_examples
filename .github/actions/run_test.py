@@ -28,6 +28,6 @@ if __name__ == "__main__":
     
     ini_file = StringIO(string) 
 
-    sdk = looker_sdk.init31(config_file=ini_file)
+    sdk = looker_sdk.init31(config_file=string)
 
     print(sdk.me())
