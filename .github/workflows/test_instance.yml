@@ -38,9 +38,9 @@ jobs:
     - name: Run Action Script
       env:
         BASE_URL: ${{ secrets.L_BASE_URL }}
-        CLIENT_ID: ${{ secrets.L_API_CLIENT_ID }}
-        CLIENT_SECRET: ${{ secrets.L_API_CLIENT_SECRET }}
-        VERIFY_SSL: ${{ secrets.L_API_VERIFY_SSL }}
+        CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
+        VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
         python .github/actions/test_ini_in.py
         python .github/actions/run_test.py
