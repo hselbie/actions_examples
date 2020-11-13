@@ -19,7 +19,7 @@ jobs:
         BASE_URL=${{ secrets.L_BASE_URL }}
         CLIENT_ID=${{ secrets.L_API_CLIENT_ID }}
         CLIENT_SECRET=${{ secrets.L_API_CLIENT_SECRET }}
-        VERIFY_SSL=${{ secrets.L_API_VERIFY_SSL }}
+        # VERIFY_SSL=${{ secrets.L_API_VERIFY_SSL }}
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
