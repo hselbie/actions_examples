@@ -5,7 +5,7 @@ import os
 import pprint 
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     # parser = argparse.ArgumentParser()
     # parser.add_argument('--id', type=str)
     # parser.add_argument('--secret', type=str)
