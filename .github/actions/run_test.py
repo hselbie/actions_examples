@@ -32,6 +32,6 @@ if __name__ == "__main__":
     # # print(t)
 
 
-    sdk = looker_sdk.init31(config_file=ini_file)
+    sdk = looker_sdk.init31()
 
     # print(sdk.me())
