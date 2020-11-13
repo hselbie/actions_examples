@@ -1,35 +1,27 @@
 import jinja2
 import os
 
-# Get the list of user's 
-# environment variables 
-env_var = os.environ 
+# Get the list of user's
+# environment variables
+env_var = os.environ
 env_var = dict(env_var)
-# Print the list of user's 
-# environment variables 
-# print("User's Environment variable:") 
-# pprint.pprint(dict(env_var), width = 1) 
-
-print(env_var.get('BASE_URL'))
-
-
-# template = """
-# [Looker]
-# api_version=4.0
-# base_url={{ env_var.get(BASE_URL }}
-# client_id=$CLIENT_ID
-# client_secret=$CLIENT_SECRET
-# verify_ssl=False
-# """
-
 data = {
-    "hostname": "core-sw-waw-01",
-    "name_server_pri": "1.1.1.1",
-    "name_server_sec": "8.8.8.8",
-    "ntp_server_pri": "0.pool.ntp.org",
-    "ntp_server_sec": "1.pool.ntp.org",
+    "base_url": env_var.get('BASE_URL'),
+    "client_id": env_var.get('CLIENT_ID'),
+    "client_secret": env_var.get('CLIENT_SECRET'),
 }
 
-# j2_template = Template(template)
+template = """
+[Looker]
+api_version=4.0
+base_url={{ base_url }}
+client_id={{client_id}}
+client_secret={{client_secret}}
+verify_ssl=False
+"""
 
-# print(j2_template.render(data))
+
+
+j2_template = jinja2.Template(template)
+
+print(j2_template.render(data))
