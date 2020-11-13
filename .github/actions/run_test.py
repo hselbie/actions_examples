@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # client_id={args.id}
     # client_secret={args.secret}
     # verify_ssl=False'''
-    ini_file = 'actions_examples/.github/actions/test_instance.ini'
+    ini_file = '.github/actions/test_instance.ini'
     config = ConfigParser.RawConfigParser(allow_no_value=True)
     config.read(ini_file)
     # t = config.get('Looker', 'base_url')
