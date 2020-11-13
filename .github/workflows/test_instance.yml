@@ -15,6 +15,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      env:
+        BASE_URL=${{ secrets.L_BASE_URL }}
+        CLIENT_ID=${{ secrets.L_API_CLIENT_ID }}
+        CLIENT_SECRET=${{ secrets.L_API_CLIENT_SECRET }}
+        VERIFY_SSL=${{ secrets.L_API_VERIFY_SSL }}
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -36,4 +41,4 @@ jobs:
 
     - name: Run Action Script
       run: |
-        python .github/actions/run_test.py ${{ github.head_ref }}
+        python .github/actions/run_test.py ${{ secrets.L_BASE_URL }}
