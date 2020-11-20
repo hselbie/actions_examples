@@ -157,7 +157,10 @@ main()
 
 if __name__ == "__main__":
     sdk = looker_sdk.init31()
-    base_url = get_base_url()
+    env_var = os.environ
+    env_var = dict(env_var)
+
+    base_url = env_var.get('BASE_URL')
     space_data = get_space_data()
     print("Checking for broken content in production.")
     broken_content_prod = parse_broken_content(
