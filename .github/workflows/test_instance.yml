@@ -42,7 +42,6 @@ jobs:
       run: |
         python .github/actions/test_ini_in.py
         python .github/actions/run_test.py
-      run: |
         python .github/actions/spectacles/configyml.py
         .github/actions/spectacles/spectacles sql \
                                   --config-file config.yaml \
