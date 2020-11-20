@@ -18,9 +18,11 @@ sql_response = subprocess.run(
     '--base-url', 
     'https://profservices.dev.looker.com',
     '--client-id', 
-    CLIENT_ID,
+    'b88cXDHjbkMwvbwCWXCj',
+    # CLIENT_ID,
     '--client-secret', 
-    CLIENT_SECRET,
+    'jbH2X6JCDJqyh2nR6HWFm3Q5'
+    # CLIENT_SECRET,
     '-v'
     ])
 
