@@ -12,13 +12,13 @@ import hashlib
 import csv
 
 
-def get_base_url():
-    """ Pull base url from looker.ini, remove port"""
-    config = configparser.ConfigParser()
-    config.read(config_file)
-    full_base_url = config.get("Looker", "base_url")
-    base_url = sdk.auth.settings.base_url[: full_base_url.index(":19999")]
-    return base_url
+# def get_base_url():
+#     """ Pull base url from looker.ini, remove port"""
+#     config = configparser.ConfigParser()
+#     config.read(config_file)
+#     full_base_url = config.get("Looker", "base_url")
+#     base_url = sdk.auth.settings.base_url[: full_base_url.index(":19999")]
+#     return base_url
 
 
 def get_space_data():
@@ -125,9 +125,6 @@ def write_broken_content_to_file(broken_content, output_csv_name):
         print("Broken content information outputed to {}".format(output_csv_name))
     except IOError:
         print("I/O error")
-
-
-main()
   
 
 if __name__ == "__main__":
