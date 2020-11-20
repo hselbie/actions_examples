@@ -42,6 +42,7 @@ jobs:
       run: |
        echo ${GITHUB_REF##*/}
        echo ${{ github.workspace }}
+       echo $GITHUB_REPOSITORY
     # python .github/actions/test_ini_in.py
     # python .github/actions/run_test.py
       # python .github/actions/spectacles/run_spectacles.py
