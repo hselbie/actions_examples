@@ -42,10 +42,4 @@ jobs:
       run: |
         python .github/actions/test_ini_in.py
         python .github/actions/run_test.py
-        spectacles sql --project hugo_sandbox --branch ${GITHUB_REF##*/} --base-url https://profservices.dev.looker.com --client-id b88cXDHjbkMwvbwCWXCj --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v
-      # spectacles sql \
-      #     --base_url $BASE_URL
-      #     --client_id $CLIENT_ID \
-      #     --client_secret $CLIENT_SECRET \
-      #     --branch master \
-      #     --project hugo_sandbox
+        python .github/actions/run_spectacles.py
