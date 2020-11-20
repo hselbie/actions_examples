@@ -21,7 +21,7 @@ sql_response = subprocess.run(
     'b88cXDHjbkMwvbwCWXCj',
     # CLIENT_ID,
     '--client-secret', 
-    'jbH2X6JCDJqyh2nR6HWFm3Q5'
+    'jbH2X6JCDJqyh2nR6HWFm3Q5',
     # CLIENT_SECRET,
     '-v'
     ])
