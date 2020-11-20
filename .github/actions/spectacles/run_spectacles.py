@@ -16,7 +16,6 @@ sql_response = subprocess.run(
     '--client-id', CLIENT_ID,
     '--client-secret', CLIENT_SECRET,
     '-v'
-    ]
+    ])
 
 print(sql_response)
-                )
