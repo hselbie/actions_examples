@@ -151,7 +151,7 @@ if __name__ == "__main__":
 
     new_broken_content = compare_broken_content(broken_content_prod, broken_content_dev)
     if new_broken_content:
-        print('hugo')
+        print(new_broken_content)
         # write_broken_content_to_file(new_broken_content, "new_broken_content.csv")
     else:
         print("No new broken content in development branch.")
