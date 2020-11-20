@@ -6,9 +6,6 @@ import os
 env_var = os.environ
 env_var = dict(env_var)
 
-#test
-#tes
-
 template = jinja2.Template("""
 [Looker]
 api_version=4.0
