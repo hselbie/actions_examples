@@ -14,7 +14,7 @@ sql_response = subprocess.run(
     '--branch', '${GITHUB_REF##*/}',
     '--base-url', 'https://profservices.dev.looker.com'
     '--client-id', CLIENT_ID,
-    '--client-secret' CLIENT_SECRET,
+    '--client-secret', CLIENT_SECRET,
     '-v'
     ]
 
