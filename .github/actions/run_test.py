@@ -30,7 +30,7 @@ def get_space_data():
 def get_broken_content():
     """Collect broken content"""
     broken_content = sdk.content_validation(
-        transport_options=transport.TransportSettings(timeout=600)
+        # transport_options=transport.TransportSettings(timeout=600)
     ).content_with_errors
     return broken_content
 
