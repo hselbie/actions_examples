@@ -42,4 +42,4 @@ jobs:
       run: |
         python .github/actions/test_ini_in.py
         python .github/actions/run_test.py
-        python .github/actions/run_spectacles.py
+        python .github/actions/spectacles/run_spectacles.py
