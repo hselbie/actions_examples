@@ -12,31 +12,6 @@ import hashlib
 import csv
 
 
-def main():
-    """Compare the output of content validator runs
-    in production and development mode. Additional
-    broken content in development mode will be
-    outputted to a csv file.
-
-    Use this script to test whether LookML changes
-    will result in new broken content."""
-
-    print("Checking for broken content in production.")
-    broken_content_prod = parse_broken_content(
-        base_url, get_broken_content(), space_data
-    )
-    checkout_dev_branch()
-    print("Checking for broken content in dev branch.")
-    broken_content_dev = parse_broken_content(
-        base_url, get_broken_content(), space_data
-    )
-    new_broken_content = compare_broken_content(broken_content_prod, broken_content_dev)
-    if new_broken_content:
-        write_broken_content_to_file(new_broken_content, "new_broken_content.csv")
-    else:
-        print("No new broken content in development branch.")
-
-
 def get_base_url():
     """ Pull base url from looker.ini, remove port"""
     config = configparser.ConfigParser()
