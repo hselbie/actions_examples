@@ -43,8 +43,8 @@ jobs:
         python .github/actions/test_ini_in.py
         python .github/actions/run_test.py
         python .github/actions/spectacles/configyml.py
-        .github/actions/spectacles/spectacles sql \
-                                  --config-file config.yaml \
-                                  --branch master \
-                                  --project the_look \
-                                  --explores the_look/order_items
+        spectacles sql \
+            --client_id $CLIENT_ID \
+            --client_secret $CLIENT_SECRET \
+            --branch master \
+            --project hugo_sandbox
