@@ -3,8 +3,6 @@ import argparse
 import configparser as ConfigParser
 import os
 import pprint 
-
-import looker_sdk
 from looker_sdk import models
 from looker_sdk.rtl import transport
 import configparser
@@ -12,13 +10,6 @@ import hashlib
 import csv
 
 
-# def get_base_url():
-#     """ Pull base url from looker.ini, remove port"""
-#     config = configparser.ConfigParser()
-#     config.read(config_file)
-#     full_base_url = config.get("Looker", "base_url")
-#     base_url = sdk.auth.settings.base_url[: full_base_url.index(":19999")]
-#     return base_url
 
 
 def get_space_data():

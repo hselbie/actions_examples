@@ -1,4 +1,5 @@
 import subprocess
+import looker_sdk
 import os
 
 sdk = looker_sdk.init31()
