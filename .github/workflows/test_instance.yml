@@ -40,7 +40,23 @@ jobs:
         CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
         VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
-        python .github/actions/test_ini_in.py
-        python .github/actions/run_test.py
-        python .github/actions/spectacles/run_spectacles.py
-        echo ${GITHUB_REF##*/}
+       echo ${GITHUB_REF##*/}
+       echo ${{ github.workspace }}
+    # python .github/actions/test_ini_in.py
+    # python .github/actions/run_test.py
+      # python .github/actions/spectacles/run_spectacles.py
+       
+    # - name: Run the build php script
+    #   run: |
+
+        
+    # - name: Commit files # transfer the new html files back into the repository
+    #   run: |
+    #     git config --local user.name "jpadfield"
+    #     git add ./docs
+    #     git commit -m "Updating the repository GitHub html pages in the docs folder"
+    # - name: Push changes # push the output folder to your repo
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     force: true

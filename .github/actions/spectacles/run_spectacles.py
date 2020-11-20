@@ -26,5 +26,3 @@ sql_response = subprocess.run(
     # CLIENT_SECRET,
     '-v'
     ])
-
-print(sql_response)
