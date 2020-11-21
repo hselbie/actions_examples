@@ -40,26 +40,28 @@ jobs:
         CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
         VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
-       echo ${GITHUB_REF}
        echo ${GITHUB_REF##*/}
-       echo ${{ github.workspace }}
        echo ${GITHUB_REPOSITORY##*/}
        echo ${BASE_URL}
-    # python .github/actions/test_ini_in.py
-    # python .github/actions/run_test.py
-      # python .github/actions/spectacles/run_spectacles.py
+       spectacles sql \
+       --project hugo_sandbox \
+       --branch master \
+       --base-url https://profservices.dev.looker.com \
+       --client-id b88cXDHjbkMwvbwCWXCj \
+       --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v \
+       2>&1 | tee test.txt
        
-    # - name: Run the build php script
-    #   run: |
-
+      # python .github/actions/spectacles/run_spectacles.py
+      # python .github/actions/test_ini_in.py
+      # python .github/actions/run_test.py
         
-    # - name: Commit files # transfer the new html files back into the repository
-    #   run: |
-    #     git config --local user.name "jpadfield"
-    #     git add ./docs
-    #     git commit -m "Updating the repository GitHub html pages in the docs folder"
-    # - name: Push changes # push the output folder to your repo
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     force: true
+    - name: Commit files # transfer the new html files back into the repository
+      run: |
+        git config --local user.name "hselbie"
+        git add .
+        git commit -m "Updating the repository GitHub html pages in the docs folder"
+    - name: Push changes # push the output folder to your repo
+      uses: github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
