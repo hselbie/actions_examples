@@ -60,8 +60,8 @@ jobs:
         git config --local user.name "hselbie"
         git add .
         git commit -m "Updating the repository GitHub html pages in the docs folder"
-    - name: Push changes # push the output folder to your repo
-      uses: github-push-action@master
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+        branch: ${{ github.ref }}
