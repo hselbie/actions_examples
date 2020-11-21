@@ -56,6 +56,11 @@ jobs:
       # python .github/actions/run_test.py
         
     - name: Commit files # transfer the new html files back into the repository
+      env:
+        BASE_URL: ${{ secrets.L_BASE_URL }}
+        CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
+        VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
         echo ${BASE_URL} 
         git config --local user.name "hselbie"
