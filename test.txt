@@ -1,0 +1,98 @@
+Authenticating Looker API credentials
+Checking Looker instance release version
+Connected to Looker version 7.20.7 using Looker API 3.1
+Getting active branch for project 'hugo_sandbox'
+The active branch is 'master'
+Updating session to use the production workspace
+Building LookML project hierarchy for project 'hugo_sandbox' @ master
+Getting all models and explores from https://profservices.dev.looker.com
+Getting all dimensions from explore bsandell
+Getting all dimensions from explore company_list
+Getting all dimensions from explore distribution_centers
+Getting all dimensions from explore events
+Getting all dimensions from explore inventory_items
+Getting all dimensions from explore order_items
+Getting all dimensions from explore products
+Getting all dimensions from explore users
+
+============== Testing 8 explores [batch mode] [concurrency = 10] ==============
+
+Creating async query for hugo_sandbox/bsandell/*
+Query for hugo_sandbox/bsandell/* created as query 119831
+Creating async query for hugo_sandbox/company_list/company_list.company_id
+Query for hugo_sandbox/company_list/company_list.company_id created as query 119832
+Creating async query for hugo_sandbox/distribution_centers/*
+Query for hugo_sandbox/distribution_centers/* created as query 119833
+Creating async query for hugo_sandbox/events/*
+Query for hugo_sandbox/events/* created as query 119834
+Creating async query for hugo_sandbox/inventory_items/*
+Query for hugo_sandbox/inventory_items/* created as query 119835
+Creating async query for hugo_sandbox/order_items/*
+Query for hugo_sandbox/order_items/* created as query 119836
+Creating async query for hugo_sandbox/products/*
+Query for hugo_sandbox/products/* created as query 119837
+Creating async query for hugo_sandbox/users/*
+Query for hugo_sandbox/users/* created as query 119838
+Starting a new loop, 8 queries queued
+10 available query slots, creating query task
+Starting query 119831
+Query 119831 is running under query task a4665335a40dfa8487ee3bb27465e233
+9 available query slots, creating query task
+Starting query 119832
+Query 119832 is running under query task 6717632f4897597fdc1b06b2bfae6f69
+8 available query slots, creating query task
+Starting query 119833
+Query 119833 is running under query task 689b2063928b3fbff4177160066e4a0a
+7 available query slots, creating query task
+Starting query 119834
+Query 119834 is running under query task aff0912444e8a3f5bae4fc1bb2f7c447
+6 available query slots, creating query task
+Starting query 119835
+Query 119835 is running under query task bd694aa560bf2dbe8ea5048958a41ab3
+5 available query slots, creating query task
+Starting query 119836
+Query 119836 is running under query task f1bc87316c94f79fec35d7b44249d2d2
+4 available query slots, creating query task
+Starting query 119837
+Query 119837 is running under query task a6e7627a199be477fb54f200c031df10
+3 available query slots, creating query task
+Starting query 119838
+Query 119838 is running under query task 0f2964e79c32171c94f95c85ec257b89
+Checking for results of 8 query tasks
+Attempting to get results for 8 query tasks
+Query task 0f2964e79c32171c94f95c85ec257b89 status is: added
+Query task 6717632f4897597fdc1b06b2bfae6f69 status is: complete
+Query task 689b2063928b3fbff4177160066e4a0a status is: complete
+Query task a4665335a40dfa8487ee3bb27465e233 status is: complete
+Query task a6e7627a199be477fb54f200c031df10 status is: running
+Query task aff0912444e8a3f5bae4fc1bb2f7c447 status is: running
+Query task bd694aa560bf2dbe8ea5048958a41ab3 status is: running
+Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
+Checking for results of 5 query tasks
+Attempting to get results for 5 query tasks
+Query task 0f2964e79c32171c94f95c85ec257b89 status is: running
+Query task a6e7627a199be477fb54f200c031df10 status is: running
+Query task aff0912444e8a3f5bae4fc1bb2f7c447 status is: complete
+Query task bd694aa560bf2dbe8ea5048958a41ab3 status is: complete
+Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
+Checking for results of 3 query tasks
+Attempting to get results for 3 query tasks
+Query task 0f2964e79c32171c94f95c85ec257b89 status is: complete
+Query task a6e7627a199be477fb54f200c031df10 status is: complete
+Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
+Checking for results of 1 query tasks
+Attempting to get results for 1 query tasks
+Query task f1bc87316c94f79fec35d7b44249d2d2 status is: complete
+Restoring project 'hugo_sandbox' to branch 'master'
+Updating session to use the production workspace
+✓ [32mhugo_sandbox.bsandell[0m passed
+✓ [32mhugo_sandbox.company_list[0m passed
+✓ [32mhugo_sandbox.distribution_centers[0m passed
+✓ [32mhugo_sandbox.events[0m passed
+✓ [32mhugo_sandbox.inventory_items[0m passed
+✓ [32mhugo_sandbox.order_items[0m passed
+✓ [32mhugo_sandbox.products[0m passed
+✓ [32mhugo_sandbox.users[0m passed
+
+Completed SQL validation in 44 seconds.
+
