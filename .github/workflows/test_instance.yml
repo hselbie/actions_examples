@@ -43,7 +43,8 @@ jobs:
        echo ${GITHUB_REF}
        echo ${GITHUB_REF##*/}
        echo ${{ github.workspace }}
-       echo ${GITHUB_REPOSITORY##/*}
+       echo ${GITHUB_REPOSITORY##*/}
+       echo ${BASE_URL}
     # python .github/actions/test_ini_in.py
     # python .github/actions/run_test.py
       # python .github/actions/spectacles/run_spectacles.py
