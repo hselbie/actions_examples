@@ -36,53 +36,49 @@ Query for hugo_sandbox/users/* created as query 119838
 Starting a new loop, 8 queries queued
 10 available query slots, creating query task
 Starting query 119831
-Query 119831 is running under query task a4665335a40dfa8487ee3bb27465e233
+Query 119831 is running under query task baa97b132bcb2bdea686bf4b1c17207d
 9 available query slots, creating query task
 Starting query 119832
-Query 119832 is running under query task 6717632f4897597fdc1b06b2bfae6f69
+Query 119832 is running under query task 6c396c846306ae6cf6d13da663f73db8
 8 available query slots, creating query task
 Starting query 119833
-Query 119833 is running under query task 689b2063928b3fbff4177160066e4a0a
+Query 119833 is running under query task 5fb9a640b4781440115f30e4dc9355f0
 7 available query slots, creating query task
 Starting query 119834
-Query 119834 is running under query task aff0912444e8a3f5bae4fc1bb2f7c447
+Query 119834 is running under query task 71e7f637f06be5cb21dc38029dcbb908
 6 available query slots, creating query task
 Starting query 119835
-Query 119835 is running under query task bd694aa560bf2dbe8ea5048958a41ab3
+Query 119835 is running under query task 8ecb038e848e2034ca5102b5a900e80e
 5 available query slots, creating query task
 Starting query 119836
-Query 119836 is running under query task f1bc87316c94f79fec35d7b44249d2d2
+Query 119836 is running under query task ccd5b7260df24901a9130481551c1911
 4 available query slots, creating query task
 Starting query 119837
-Query 119837 is running under query task a6e7627a199be477fb54f200c031df10
+Query 119837 is running under query task 3824f49077506c4c1e033b03c8bf0bd8
 3 available query slots, creating query task
 Starting query 119838
-Query 119838 is running under query task 0f2964e79c32171c94f95c85ec257b89
+Query 119838 is running under query task 9a15b83d93eff9586bd37bfe070ace98
 Checking for results of 8 query tasks
 Attempting to get results for 8 query tasks
-Query task 0f2964e79c32171c94f95c85ec257b89 status is: added
-Query task 6717632f4897597fdc1b06b2bfae6f69 status is: complete
-Query task 689b2063928b3fbff4177160066e4a0a status is: complete
-Query task a4665335a40dfa8487ee3bb27465e233 status is: complete
-Query task a6e7627a199be477fb54f200c031df10 status is: running
-Query task aff0912444e8a3f5bae4fc1bb2f7c447 status is: running
-Query task bd694aa560bf2dbe8ea5048958a41ab3 status is: running
-Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
+Query task 3824f49077506c4c1e033b03c8bf0bd8 status is: running
+Query task 5fb9a640b4781440115f30e4dc9355f0 status is: complete
+Query task 6c396c846306ae6cf6d13da663f73db8 status is: complete
+Query task 71e7f637f06be5cb21dc38029dcbb908 status is: running
+Query task 8ecb038e848e2034ca5102b5a900e80e status is: running
+Query task 9a15b83d93eff9586bd37bfe070ace98 status is: added
+Query task baa97b132bcb2bdea686bf4b1c17207d status is: complete
+Query task ccd5b7260df24901a9130481551c1911 status is: running
 Checking for results of 5 query tasks
 Attempting to get results for 5 query tasks
-Query task 0f2964e79c32171c94f95c85ec257b89 status is: running
-Query task a6e7627a199be477fb54f200c031df10 status is: running
-Query task aff0912444e8a3f5bae4fc1bb2f7c447 status is: complete
-Query task bd694aa560bf2dbe8ea5048958a41ab3 status is: complete
-Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
-Checking for results of 3 query tasks
-Attempting to get results for 3 query tasks
-Query task 0f2964e79c32171c94f95c85ec257b89 status is: complete
-Query task a6e7627a199be477fb54f200c031df10 status is: complete
-Query task f1bc87316c94f79fec35d7b44249d2d2 status is: running
-Checking for results of 1 query tasks
-Attempting to get results for 1 query tasks
-Query task f1bc87316c94f79fec35d7b44249d2d2 status is: complete
+Query task 3824f49077506c4c1e033b03c8bf0bd8 status is: complete
+Query task 71e7f637f06be5cb21dc38029dcbb908 status is: complete
+Query task 8ecb038e848e2034ca5102b5a900e80e status is: complete
+Query task 9a15b83d93eff9586bd37bfe070ace98 status is: running
+Query task ccd5b7260df24901a9130481551c1911 status is: running
+Checking for results of 2 query tasks
+Attempting to get results for 2 query tasks
+Query task 9a15b83d93eff9586bd37bfe070ace98 status is: complete
+Query task ccd5b7260df24901a9130481551c1911 status is: complete
 Restoring project 'hugo_sandbox' to branch 'master'
 Updating session to use the production workspace
 ✓ [32mhugo_sandbox.bsandell[0m passed
@@ -94,5 +90,5 @@ Updating session to use the production workspace
 ✓ [32mhugo_sandbox.products[0m passed
 ✓ [32mhugo_sandbox.users[0m passed
 
-Completed SQL validation in 44 seconds.
+Completed SQL validation in 41 seconds.
 

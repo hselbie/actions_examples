@@ -96,3 +96,97 @@
 2020-11-21 01:04:20,099 INFO | 
 2020-11-21 01:04:20,100 INFO | Completed SQL validation in 44 seconds.
 
+2020-11-21 01:07:52,252 DEBUG | Authenticating Looker API credentials
+2020-11-21 01:07:52,555 DEBUG | Checking Looker instance release version
+2020-11-21 01:07:52,623 INFO | Connected to Looker version 7.20.7 using Looker API 3.1
+2020-11-21 01:07:52,623 DEBUG | Getting active branch for project 'hugo_sandbox'
+2020-11-21 01:07:52,706 DEBUG | The active branch is 'master'
+2020-11-21 01:07:52,706 DEBUG | Updating session to use the production workspace
+2020-11-21 01:07:52,778 INFO | Building LookML project hierarchy for project 'hugo_sandbox' @ master
+2020-11-21 01:07:52,778 DEBUG | Getting all models and explores from https://profservices.dev.looker.com
+2020-11-21 01:08:24,666 DEBUG | Getting all dimensions from explore bsandell
+2020-11-21 01:08:24,842 DEBUG | Getting all dimensions from explore company_list
+2020-11-21 01:08:24,998 DEBUG | Getting all dimensions from explore distribution_centers
+2020-11-21 01:08:25,163 DEBUG | Getting all dimensions from explore events
+2020-11-21 01:08:25,354 DEBUG | Getting all dimensions from explore inventory_items
+2020-11-21 01:08:25,560 DEBUG | Getting all dimensions from explore order_items
+2020-11-21 01:08:25,790 DEBUG | Getting all dimensions from explore products
+2020-11-21 01:08:25,964 DEBUG | Getting all dimensions from explore users
+2020-11-21 01:08:26,143 INFO | 
+============== Testing 8 explores [batch mode] [concurrency = 10] ==============
+
+2020-11-21 01:08:26,143 DEBUG | Creating async query for hugo_sandbox/bsandell/*
+2020-11-21 01:08:26,304 DEBUG | Query for hugo_sandbox/bsandell/* created as query 119831
+2020-11-21 01:08:26,304 DEBUG | Creating async query for hugo_sandbox/company_list/company_list.company_id
+2020-11-21 01:08:26,424 DEBUG | Query for hugo_sandbox/company_list/company_list.company_id created as query 119832
+2020-11-21 01:08:26,424 DEBUG | Creating async query for hugo_sandbox/distribution_centers/*
+2020-11-21 01:08:26,572 DEBUG | Query for hugo_sandbox/distribution_centers/* created as query 119833
+2020-11-21 01:08:26,572 DEBUG | Creating async query for hugo_sandbox/events/*
+2020-11-21 01:08:26,707 DEBUG | Query for hugo_sandbox/events/* created as query 119834
+2020-11-21 01:08:26,707 DEBUG | Creating async query for hugo_sandbox/inventory_items/*
+2020-11-21 01:08:26,836 DEBUG | Query for hugo_sandbox/inventory_items/* created as query 119835
+2020-11-21 01:08:26,836 DEBUG | Creating async query for hugo_sandbox/order_items/*
+2020-11-21 01:08:26,964 DEBUG | Query for hugo_sandbox/order_items/* created as query 119836
+2020-11-21 01:08:26,964 DEBUG | Creating async query for hugo_sandbox/products/*
+2020-11-21 01:08:27,092 DEBUG | Query for hugo_sandbox/products/* created as query 119837
+2020-11-21 01:08:27,092 DEBUG | Creating async query for hugo_sandbox/users/*
+2020-11-21 01:08:27,236 DEBUG | Query for hugo_sandbox/users/* created as query 119838
+2020-11-21 01:08:27,236 DEBUG | Starting a new loop, 8 queries queued
+2020-11-21 01:08:27,236 DEBUG | 10 available query slots, creating query task
+2020-11-21 01:08:27,236 DEBUG | Starting query 119831
+2020-11-21 01:08:27,429 DEBUG | Query 119831 is running under query task baa97b132bcb2bdea686bf4b1c17207d
+2020-11-21 01:08:27,429 DEBUG | 9 available query slots, creating query task
+2020-11-21 01:08:27,429 DEBUG | Starting query 119832
+2020-11-21 01:08:27,634 DEBUG | Query 119832 is running under query task 6c396c846306ae6cf6d13da663f73db8
+2020-11-21 01:08:27,634 DEBUG | 8 available query slots, creating query task
+2020-11-21 01:08:27,634 DEBUG | Starting query 119833
+2020-11-21 01:08:27,824 DEBUG | Query 119833 is running under query task 5fb9a640b4781440115f30e4dc9355f0
+2020-11-21 01:08:27,824 DEBUG | 7 available query slots, creating query task
+2020-11-21 01:08:27,824 DEBUG | Starting query 119834
+2020-11-21 01:08:28,115 DEBUG | Query 119834 is running under query task 71e7f637f06be5cb21dc38029dcbb908
+2020-11-21 01:08:28,115 DEBUG | 6 available query slots, creating query task
+2020-11-21 01:08:28,115 DEBUG | Starting query 119835
+2020-11-21 01:08:28,404 DEBUG | Query 119835 is running under query task 8ecb038e848e2034ca5102b5a900e80e
+2020-11-21 01:08:28,404 DEBUG | 5 available query slots, creating query task
+2020-11-21 01:08:28,404 DEBUG | Starting query 119836
+2020-11-21 01:08:28,715 DEBUG | Query 119836 is running under query task ccd5b7260df24901a9130481551c1911
+2020-11-21 01:08:28,715 DEBUG | 4 available query slots, creating query task
+2020-11-21 01:08:28,715 DEBUG | Starting query 119837
+2020-11-21 01:08:29,022 DEBUG | Query 119837 is running under query task 3824f49077506c4c1e033b03c8bf0bd8
+2020-11-21 01:08:29,022 DEBUG | 3 available query slots, creating query task
+2020-11-21 01:08:29,022 DEBUG | Starting query 119838
+2020-11-21 01:08:29,451 DEBUG | Query 119838 is running under query task 9a15b83d93eff9586bd37bfe070ace98
+2020-11-21 01:08:29,451 DEBUG | Checking for results of 8 query tasks
+2020-11-21 01:08:29,451 DEBUG | Attempting to get results for 8 query tasks
+2020-11-21 01:08:30,102 DEBUG | Query task 3824f49077506c4c1e033b03c8bf0bd8 status is: running
+2020-11-21 01:08:30,102 DEBUG | Query task 5fb9a640b4781440115f30e4dc9355f0 status is: complete
+2020-11-21 01:08:30,103 DEBUG | Query task 6c396c846306ae6cf6d13da663f73db8 status is: complete
+2020-11-21 01:08:30,103 DEBUG | Query task 71e7f637f06be5cb21dc38029dcbb908 status is: running
+2020-11-21 01:08:30,103 DEBUG | Query task 8ecb038e848e2034ca5102b5a900e80e status is: running
+2020-11-21 01:08:30,103 DEBUG | Query task 9a15b83d93eff9586bd37bfe070ace98 status is: added
+2020-11-21 01:08:30,103 DEBUG | Query task baa97b132bcb2bdea686bf4b1c17207d status is: complete
+2020-11-21 01:08:30,103 DEBUG | Query task ccd5b7260df24901a9130481551c1911 status is: running
+2020-11-21 01:08:30,604 DEBUG | Checking for results of 5 query tasks
+2020-11-21 01:08:30,604 DEBUG | Attempting to get results for 5 query tasks
+2020-11-21 01:08:31,225 DEBUG | Query task 3824f49077506c4c1e033b03c8bf0bd8 status is: complete
+2020-11-21 01:08:31,225 DEBUG | Query task 71e7f637f06be5cb21dc38029dcbb908 status is: complete
+2020-11-21 01:08:31,225 DEBUG | Query task 8ecb038e848e2034ca5102b5a900e80e status is: complete
+2020-11-21 01:08:31,225 DEBUG | Query task 9a15b83d93eff9586bd37bfe070ace98 status is: running
+2020-11-21 01:08:31,225 DEBUG | Query task ccd5b7260df24901a9130481551c1911 status is: running
+2020-11-21 01:08:31,726 DEBUG | Checking for results of 2 query tasks
+2020-11-21 01:08:31,726 DEBUG | Attempting to get results for 2 query tasks
+2020-11-21 01:08:32,218 DEBUG | Query task 9a15b83d93eff9586bd37bfe070ace98 status is: complete
+2020-11-21 01:08:32,218 DEBUG | Query task ccd5b7260df24901a9130481551c1911 status is: complete
+2020-11-21 01:08:32,720 DEBUG | Restoring project 'hugo_sandbox' to branch 'master'
+2020-11-21 01:08:32,720 DEBUG | Updating session to use the production workspace
+2020-11-21 01:08:32,893 INFO | ✓ hugo_sandbox.bsandell passed
+2020-11-21 01:08:32,893 INFO | ✓ hugo_sandbox.company_list passed
+2020-11-21 01:08:32,894 INFO | ✓ hugo_sandbox.distribution_centers passed
+2020-11-21 01:08:32,894 INFO | ✓ hugo_sandbox.events passed
+2020-11-21 01:08:32,894 INFO | ✓ hugo_sandbox.inventory_items passed
+2020-11-21 01:08:32,895 INFO | ✓ hugo_sandbox.order_items passed
+2020-11-21 01:08:32,895 INFO | ✓ hugo_sandbox.products passed
+2020-11-21 01:08:32,896 INFO | ✓ hugo_sandbox.users passed
+2020-11-21 01:08:32,896 INFO | 
+2020-11-21 01:08:32,898 INFO | Completed SQL validation in 41 seconds.
+
