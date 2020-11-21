@@ -57,6 +57,7 @@ jobs:
         
     - name: Commit files # transfer the new html files back into the repository
       run: |
+        echo ${BASE_URL} 
         git config --local user.name "hselbie"
         git add .
         git commit -m "Updating the repository GitHub html pages in the docs folder"
