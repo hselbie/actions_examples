@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../clients/sunrun"
+		},
+		{
+			"path": "../../../ini"
+		}
+	],
+	"settings": {}
+}

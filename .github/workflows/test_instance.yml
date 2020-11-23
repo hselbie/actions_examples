@@ -33,27 +33,39 @@ jobs:
     #     # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
     #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Run Action Script
+    - name: Run Spectacles Tests
       env:
         BASE_URL: ${{ secrets.L_BASE_URL }}
         CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
         VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
-       echo ${GITHUB_REF##*/}
-       echo ${GITHUB_REPOSITORY##*/}
-       echo ${BASE_URL}
        spectacles sql \
        --project hugo_sandbox \
        --branch master \
        --base-url https://profservices.dev.looker.com \
        --client-id b88cXDHjbkMwvbwCWXCj \
        --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v \
-       2>&1 | tee test.txt
+       2>&1 | tee sql_output.txt
+
+       spectacles content \
+       --project hugo_sandbox \
+       --branch master \
+       --base-url https://profservices.dev.looker.com \
+       --client-id b88cXDHjbkMwvbwCWXCj \
+       --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v \
+       --exclude-personal
+       2>&1 | tee content_output.txt
        
-      # python .github/actions/spectacles/run_spectacles.py
-      # python .github/actions/test_ini_in.py
-      # python .github/actions/run_test.py
+    - name: Run Spectacles Tests
+      env:
+        BASE_URL: ${{ secrets.L_BASE_URL }}
+        CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
+        VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
+      run: |
+      python .github/actions/test_ini_in.py
+      python .github/actions/run_test.py
         
     - name: Commit files # transfer the new html files back into the repository
       env:
