@@ -36,49 +36,45 @@ Query for hugo_sandbox/users/* created as query 119838
 Starting a new loop, 8 queries queued
 10 available query slots, creating query task
 Starting query 119831
-Query 119831 is running under query task 5398e272f69bff19daccec90cab4ebf1
+Query 119831 is running under query task 94ad611f999886aaaf6becb18c2ca441
 9 available query slots, creating query task
 Starting query 119832
-Query 119832 is running under query task 3acc17476b3e7d9080dab788886cb4eb
+Query 119832 is running under query task cb15d63dc66a0032a65dc0086ca27d9b
 8 available query slots, creating query task
 Starting query 119833
-Query 119833 is running under query task c924ee2adc24cfa2a3e0eda6f70b108c
+Query 119833 is running under query task bff399b743dbb9136b28fd0b4adf8663
 7 available query slots, creating query task
 Starting query 119834
-Query 119834 is running under query task dd4a63976b0653d5179d62dc52d7fc70
+Query 119834 is running under query task 55d8bf7c75736c75d17c21e52b3e57e9
 6 available query slots, creating query task
 Starting query 119835
-Query 119835 is running under query task a255e41215a575d9603b38d238b5d808
+Query 119835 is running under query task 68e5e10f08bf4835e12c5d765df6ca5f
 5 available query slots, creating query task
 Starting query 119836
-Query 119836 is running under query task b3b50e83c0e596073faf13cae0758002
+Query 119836 is running under query task 91e86d0ece6da132dc46d70d62b608df
 4 available query slots, creating query task
 Starting query 119837
-Query 119837 is running under query task c9b6a8ba5c5af4654a7b0b2b24bd9fce
+Query 119837 is running under query task 005330a87f426b3fd0c402505ed173b2
 3 available query slots, creating query task
 Starting query 119838
-Query 119838 is running under query task 721bf388e8031ffde425d6bc0cea4e65
+Query 119838 is running under query task e492bd5f197605752a76975a854e05e3
 Checking for results of 8 query tasks
 Attempting to get results for 8 query tasks
-Query task 3acc17476b3e7d9080dab788886cb4eb status is: complete
-Query task 5398e272f69bff19daccec90cab4ebf1 status is: complete
-Query task 721bf388e8031ffde425d6bc0cea4e65 status is: added
-Query task a255e41215a575d9603b38d238b5d808 status is: running
-Query task b3b50e83c0e596073faf13cae0758002 status is: expired
-Query task c924ee2adc24cfa2a3e0eda6f70b108c status is: complete
-Query task c9b6a8ba5c5af4654a7b0b2b24bd9fce status is: running
-Query task dd4a63976b0653d5179d62dc52d7fc70 status is: running
+Query task 005330a87f426b3fd0c402505ed173b2 status is: running
+Query task 55d8bf7c75736c75d17c21e52b3e57e9 status is: running
+Query task 68e5e10f08bf4835e12c5d765df6ca5f status is: running
+Query task 91e86d0ece6da132dc46d70d62b608df status is: expired
+Query task 94ad611f999886aaaf6becb18c2ca441 status is: complete
+Query task bff399b743dbb9136b28fd0b4adf8663 status is: complete
+Query task cb15d63dc66a0032a65dc0086ca27d9b status is: complete
+Query task e492bd5f197605752a76975a854e05e3 status is: added
 Checking for results of 5 query tasks
 Attempting to get results for 5 query tasks
-Query task 721bf388e8031ffde425d6bc0cea4e65 status is: running
-Query task a255e41215a575d9603b38d238b5d808 status is: complete
-Query task b3b50e83c0e596073faf13cae0758002 status is: expired
-Query task c9b6a8ba5c5af4654a7b0b2b24bd9fce status is: complete
-Query task dd4a63976b0653d5179d62dc52d7fc70 status is: complete
-Checking for results of 2 query tasks
-Attempting to get results for 2 query tasks
-Query task 721bf388e8031ffde425d6bc0cea4e65 status is: complete
-Query task b3b50e83c0e596073faf13cae0758002 status is: error
+Query task 005330a87f426b3fd0c402505ed173b2 status is: complete
+Query task 55d8bf7c75736c75d17c21e52b3e57e9 status is: complete
+Query task 68e5e10f08bf4835e12c5d765df6ca5f status is: complete
+Query task 91e86d0ece6da132dc46d70d62b608df status is: error
+Query task e492bd5f197605752a76975a854e05e3 status is: complete
 Restoring project 'hugo_sandbox' to branch 'master'
 Updating session to use the production workspace
 ✓ [32mhugo_sandbox.bsandell[0m passed
@@ -207,5 +203,5 @@ Spectacles in single-dimension mode, with `--mode single`.
 
 You can also run this original validation with `--mode hybrid` to do this automatically.[0m
 
-Completed SQL validation in 43 seconds.
+Completed SQL validation in 38 seconds.
 
