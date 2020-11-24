@@ -43,21 +43,21 @@ jobs:
        spectacles sql \
        --project hugo_sandbox \
        --branch master \
-       --base-url https://profservices.dev.looker.com \
-       --client-id b88cXDHjbkMwvbwCWXCj \
-       --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v \
+       --base-url $BASE_URL \
+       --client-id $CLIENT_ID \
+       --client-secret CLIENT_SECRET  -v \
        2>&1 | tee sql_output.txt
 
        spectacles content \
        --project hugo_sandbox \
        --branch master \
-       --base-url https://profservices.dev.looker.com \
-       --client-id b88cXDHjbkMwvbwCWXCj \
-       --client-secret jbH2X6JCDJqyh2nR6HWFm3Q5 -v \
+       --base-url $BASE_URL \
+       --client-id $CLIENT_ID \
+       --client-secret CLIENT_SECRET  -v \
        --exclude-personal
        2>&1 | tee content_output.txt
        
-    - name: Run Spectacles Tests
+    - name: Run Data Test Comparisons
       env:
         BASE_URL: ${{ secrets.L_BASE_URL }}
         CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
@@ -68,13 +68,7 @@ jobs:
         python .github/actions/run_test.py
         
     - name: Commit files # transfer the new html files back into the repository
-      env:
-        BASE_URL: ${{ secrets.L_BASE_URL }}
-        CLIENT_ID: ${{ secrets.L_CLIENT_ID }}
-        CLIENT_SECRET: ${{ secrets.L_CLIENT_SECRET }}
-        VERIFY_SSL: ${{ secrets.VERIFY_SSL }}
       run: |
-        echo ${BASE_URL} 
         git config --local user.name "hselbie"
         git add .
         git commit -m "Updating the repository GitHub html pages in the docs folder"

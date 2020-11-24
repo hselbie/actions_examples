@@ -4,9 +4,6 @@
 			"path": "../.."
 		},
 		{
-			"path": "../../../clients/sunrun"
-		},
-		{
 			"path": "../../../ini"
 		}
 	],
