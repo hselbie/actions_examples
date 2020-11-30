@@ -49,7 +49,7 @@ jobs:
        2>&1 | tee sql_output.txt
 
        spectacles content \
-       --project hugo_sandbox \
+       --project hugo_sandbox \ 
        --branch master \
        --base-url $BASE_URL \
        --client-id $CLIENT_ID \
