@@ -11,6 +11,7 @@ datagroup: the_look_default_datagroup {
 persist_with: the_look_default_datagroup
 
 explore: events {
+  view_name: test_view_name
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
