@@ -18,6 +18,19 @@ view: order_items {
   dimension: new_dim {}
   dimension: new_dim2 {}
 
+
+  filter: our_input {
+    suggest_dimension: order_id
+  }
+
+  parameter: parameterinput {
+    suggestions: ["lindsey", "gaby", "john", "steve"]
+  }
+
+  dimension: test {
+    sql: {% condition order_items.our_input %} 'foo' {% endcondition %} ;;
+  }
+
   dimension_group: delivered_at {
     type: time
     sql: cast(${TABLE}.delivered_at as timestamp) ;;
